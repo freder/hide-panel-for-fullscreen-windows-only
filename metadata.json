@@ -1,0 +1,8 @@
+{
+  "name": "Hide panel (only when active window is fullscreen)",
+  "description": "hide top panel only when a fullscreen application has focus",
+  "uuid": "hide-panel-for-fullscreen-windows-only@github.freder",
+  "shell-version": [
+    "40"
+  ]
+}
