@@ -4,7 +4,6 @@ const PanelBox = Main.layoutManager.panelBox;
 
 class Extension {
 	constructor() {
-		this.handler = this.handler.bind(this);
 		this.handlerId = null;
 	}
 
