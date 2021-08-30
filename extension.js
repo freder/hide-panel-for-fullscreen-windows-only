@@ -8,8 +8,7 @@ class Extension {
 	}
 
 	handler() {
-		const win = global.display.focus_window;
-		const { fullscreen } = win;
+		const { fullscreen } = global.display.focus_window;
 		if (fullscreen) {
 			PanelBox.hide();
 		} else {
