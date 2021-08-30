@@ -5,6 +5,7 @@ const PanelBox = Main.layoutManager.panelBox;
 class Extension {
 	constructor() {
 		this.handler = this.handler.bind(this);
+		this.handlerId = null;
 	}
 
 	handler() {
@@ -20,10 +21,11 @@ class Extension {
 	}
 
 	enable() {
-		global.display.connect('notify::focus-window', this.handler);
+		this.handlerId = global.display.connect('notify::focus-window', this.handler);
 	}
 
 	disable() {
+		global.display.disconnect(this.handlerId);
 	}
 }
 
