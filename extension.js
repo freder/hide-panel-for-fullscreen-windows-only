@@ -13,9 +13,7 @@ class Extension {
 		if (fullscreen) {
 			PanelBox.hide();
 		} else {
-			// TODO: why does this not make it fully opaque?
-			// PanelBox.set_opacity(255);
-			PanelBox.set_style('opacity: 1; background: rgba(0, 0, 0, 255);');
+			PanelBox.add_style_class_name('fully-opaque');
 			PanelBox.show();
 		}
 	}
@@ -26,6 +24,7 @@ class Extension {
 
 	disable() {
 		global.display.disconnect(this.handlerId);
+		PanelBox.remove_style_class_name('fully-opaque');
 	}
 }
 
